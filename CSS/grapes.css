@@ -1,0 +1,125 @@
+html,body{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.main{
+  height: 95.8%;
+  padding: 0;
+  margin: 0;
+}
+/* Let's highlight canvas boundaries */
+#gjs {
+  border: 3px solid #444;
+}
+
+/* Reset some default styling */
+.gjs-cv-canvas {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* remove css block to make default(grid) */
+/* .gjs-block {
+  width: auto;
+  height: auto;
+  min-height: auto;
+} */
+
+.panel__top {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  position: initial;
+  justify-content: center;
+  justify-content: space-between;
+}
+.panel__basic-actions {
+  position: initial;
+}
+
+.editor-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  /* adjust to 920px para mag full screen */
+  height: 100%; 
+}
+
+.editor-canvas {
+  flex-grow: 1;
+}
+
+.panel__right {
+  flex-basis: 230px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.panel__switcher {
+  position: initial;
+}
+
+.panel__devices {
+  position: initial;
+}
+
+#gjs {
+  border: none;
+}
+
+
+
+.icons-flex {
+  background-size: 70% 65% !important;
+  height: 15px;
+  opacity: 0.9;
+}
+.icon-dir-row {
+  background: url("img/dir-row.png") no-repeat center; 
+}
+.icon-dir-row-rev {
+  background: url("/img/dir-row-reverse.png") no-repeat center;
+}
+.icon-dir-col {
+  background: url("img/dir-column.png") no-repeat center;
+  
+}
+.icon-dir-col-rev {
+  background: url("img/dir-column-reverse.png") no-repeat center;
+  ;
+}
+.icon-just-start{
+ background: url("img/justify-flex-start.png") no-repeat center;
+}
+.icon-just-end{
+ background: url("img/justify-flex-end.png") no-repeat center;
+}
+.icon-just-sp-bet{
+ background: url("img/justify-space-between.png") no-repeat center;
+}
+.icon-just-sp-ar{
+ background: url("img/justify-space-around.png") no-repeat center;
+}
+.icon-just-sp-cent{
+ background: url("img/justify-center.png") no-repeat center;
+}
+.icon-al-start{
+ background: url("img/align-flex-start.png") no-repeat center;
+}
+.icon-al-end{
+ background: url("img/align-flex-end.png") no-repeat center;
+}
+.icon-al-str{
+ background: url("img/align-stretch.png") no-repeat center;
+}
+.icon-al-center{
+ background: url("img/align-center.png") no-repeat center;
+}
+
+[data-tooltip]::after {
+  background: rgba(51, 51, 51, 0.9);
+}

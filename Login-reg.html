@@ -41,10 +41,11 @@
             margin-top: 10px;
         }
         .username, .password{
-            width: 300px;
+            width: 290px;
             height: 35px;
             border: none;
             border-radius: 5px;
+            padding-left: 10px;
         }
 
         button{
@@ -75,7 +76,7 @@
             margin: 20px 0 20px 0;
         }
         .login-img{
-            width: 1224px;
+            width:147vh;
             margin-right: 10%;
             position: absolute;
             right: 0;
@@ -97,7 +98,7 @@
                     <li><p>Password</p></li>
                     <li><input type="password" class="password"></li>
                     <li><input type="checkbox"> Remember me</li>
-                    <li><button class="login">Login</button><br></li>
+                    <li><button class="login" onclick="Login()">Login</button><br></li>
                     <li><a href="">Forgot Password?</a></li>
                 </ul>
             </div>
@@ -108,5 +109,28 @@
         </div>
     </section>
     <img src="img/login-pic.jpg" alt="" class="login-img">
+
+    <script>
+        const username = document.querySelector(".username");
+        const password = document.querySelector(".password");
+
+        const accounts = [{
+            username: "admin",
+            password: "admin"
+        }];
+        
+        function Login(){
+            console.log(username.value, password.value);
+
+            accounts.forEach((value) => {
+                console.log(value);
+                if((value.username === username.value) && (value.password === password.value)){
+                    window.open("grapes.html", "_self");
+                }
+            });
+        }
+
+
+    </script>
 </body>
 </html>

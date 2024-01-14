@@ -9,10 +9,16 @@
             padding: 0;
             margin: 0;
         }
+        html{
+            scroll-behavior: smooth;
+        }
         body{
             background-color: #F1F3F2;
         }
         header{
+            background-color: #F1F3F2;
+            width: 100%;
+            position: fixed;
             display: flex;
             align-items: center;
             height: 50px;
@@ -34,6 +40,10 @@
             display: flex;
         }
 
+        h1{
+            font-size: 30px;
+            font-weight: bold;
+        }
         header div ul a{
             margin-left: 40px;
             text-decoration: none;
@@ -69,37 +79,62 @@
         section{
             display: flex;
             color: white;
+            align-items: center;
             justify-content: space-around;
-            background-image: linear-gradient(180deg, #2e4a70, white);
             width: 100%;
-            height: 400px;
+            
         }
-
-        section .about-des{
+        .home-sec{
+            padding: 50px 0 50px 0;
+            background-image: linear-gradient(180deg, #2e4a70, white);
+            
+        }
+        .about-sec{
+            background: linear-gradient(90deg, #F1F3F2 50%, #DFB160 50%);
+            justify-content: space-between;
+            padding: 50px 0 0 0;
+        }
+        
+        section .home-des{
             margin: 50px;
-            width: 45%;
+            width: 50vh;
             
         }
 
-        section .about-des p:nth-child(1){
-            font-size: 40px;
+        section .home-des p:nth-child(1){
+            font-size: 6vh;
         }
 
-        section .about-des button{
+        section .home-des button{
             font-weight: bolder;
+            cursor: pointer;
+            font-size: 2vh;
             margin-top: 30px;
             padding: 10px 100px 10px 100px;
             color: white;
             background-color: #DFB160;
-            border: none;
+            border-color: white;
             border-radius: 7px;
             box-shadow: 0 20px 8px -10px #888888;
         }
 
-        .about-pic img{
-            margin-left: 50px;
-            width: 450px;
+        .home-pic img{
+            width: 90%;
 
+        }
+
+        .about-sec img {
+            width: 95%;
+        }
+
+        .about-sec div h1{
+            font-size: 50px;
+        }
+        .svg{
+            margin-top: 1vh;
+            width: 85%;
+            display: flex;
+            justify-content: end;
         }
     </style>
 </head>
@@ -108,22 +143,58 @@
         <span><img src="img/logo.jpg" alt="">SiteHustle</span>
         <div>
             <ul>
-                <a>Home<div class="home"></div></a>
-                <a>About</a>
+                <a href="#Home">Home</a>
+                <a href="#About">About</a>
                 <a>Services</a>
                 <a>Contact Us</a>
             </ul>
         </div>
     </header>
-    <section>
-        <div class="about-des">
-            <p>Free and Open Source Web Builder Framework</p><br>
+
+    <section class="home-sec" id="Home">
+        <div class="home-des">
+            <h1>Free and Open Source Web Builder Framework</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum dui nec mollis posuere. Etiam sit amet purus a mi euismod euismod. Vestibulum congue enim quis tortor vehicula, in posuere quam hendrerit.</p>
-            <button>Get Started</button>
+            <button onclick="GS()">Get Started</button>
         </div>
-        <div class="about-pic">
+        <div class="home-pic">
             <img src="img/homepage-pic.png" alt="">
         </div>
     </section>
+
+    <section class="about-sec" id="About">
+        <div style="margin-left: 70px;">
+            <h1 style="color: #2E4A70;">ABOUT US</h1>
+            <img src="img/NaviaAndMe.png" alt="picture ko and my bebe">
+            <div class="svg">
+                <svg height="110" width="100">
+                    <circle cx="10" cy="10" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="40" cy="10" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="70" cy="10" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="10" cy="40" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="40" cy="40" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="70" cy="40" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="10" cy="70" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="40" cy="70" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="70" cy="70" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="10" cy="100" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="40" cy="100" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="70" cy="100" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                </svg>
+            </div>
+            
+        </div>
+        <div style="margin: 0 20px 0 20px; ">
+            <h1 style="text-align: right;">Free and Open Source Web Builder Framework</h1>
+            <p style="text-align: right;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum dui nec mollis posuere. Etiam sit amet purus a mi euismod euismod. Vestibulum congue enim quis tortor vehicula, in posuere quam hendrerit.</p>
+        </div>
+         
+    </section>
+
+    <script>
+        function GS(){
+            window.open("Login-reg.html", "_self");
+        }
+    </script>
 </body>
 </html>

@@ -3,53 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: #F1F3F2;
+        }
+        header{
+            background-color: #F1F3F2;
+            width: 100%;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            height: 50px;
+            justify-content: space-between;
+        }
+        header span{
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+        }
+        header span img{
+            width: 50px;
+            height: 50px;
+        }
+        header div{
+            margin-right: 30px;
+        }
+        header div ul {
+            display: flex;
+        }
 
-    <link href="CSS/grapick.min.css" rel="stylesheet">
-    <link href="CSS/grapes.min.css" rel="stylesheet" >
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
-    <script src="JS/basic-blocks.js"></script> <!-- important -->
-    <script src="JS/forms.js"></script> <!-- important -->
-    <script src="JS/countdown.js"></script> <!-- important -->
-    <script src="JS/tabs.js"></script> <!-- important --> 
-    <script src="JS/custom-code.js"></script> <!-- important -->
-    <script src="JS/touch.js"></script> <!-- important -->
-    <script src="JS/parser.js"></script> <!-- important -->
-    <script src="JS/image-editor.js"></script> <!-- important -->
-    <script src="JS/Typed.js"></script> <!-- important -->
-    <script src="JS/tooltip.js"></script>
-    <script src="JS/style-bg.js"></script> <!-- important -->
+        h1{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        header div ul a{
+            margin-left: 40px;
+            text-decoration: none;
+            color: #304A6F;
+            font-size: 1.1em;
+            position: relative;
+            font-weight: 500;
+            transition: .5s;
+        }
 
-    
-    <script src="JS/grapes.min.js"></script>
-    <link rel="stylesheet" href="CSS/grapes.css">
-    
-    
+        header div ul a::after{
+            content: ' ';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: #DFB160;
+            border-radius: 5px;
+            left: 0;
+            bottom: -5px;
+            transform-origin: center;
+            transform: scaleX(0);
+            transition: transform .5s;
+        }
+        header div ul a:hover{
+            color: #DFB160;
+            cursor: pointer;
+        }
+        header div ul a:hover::after{
+            transform-origin: center;
+            transform: scaleX(.80);
+        }
+        
+        section{
+            display: flex;
+            color: white;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            
+        }
+        .home-sec{
+            padding: 50px 0 50px 0;
+            background-image: linear-gradient(180deg, #2e4a70, white);
+            
+        }
+        .about-sec{
+            background: linear-gradient(90deg, #F1F3F2 50%, #DFB160 50%);
+            justify-content: space-between;
+            padding: 50px 0 0 0;
+        }
+        
+        section .home-des{
+            margin: 50px;
+            width: 50vh;
+            
+        }
+
+        section .home-des p:nth-child(1){
+            font-size: 6vh;
+        }
+
+        section .home-des button{
+            font-weight: bolder;
+            cursor: pointer;
+            font-size: 2vh;
+            margin-top: 30px;
+            padding: 10px 100px 10px 100px;
+            color: white;
+            background-color: #DFB160;
+            border-color: white;
+            border-radius: 7px;
+            box-shadow: 0 20px 8px -10px #888888;
+        }
+
+        .home-pic img{
+            width: 90%;
+
+        }
+
+        .about-sec img {
+            width: 95%;
+        }
+
+        .about-sec div h1{
+            font-size: 50px;
+        }
+        .svg{
+            margin-top: 1vh;
+            width: 85%;
+            display: flex;
+            justify-content: end;
+        }
+    </style>
 </head>
 <body>
-    <div class="main">
-      <div class="panel__top">
-        <div class="panel__basic-actions"></div>
-        <div class="panel__devices"></div>
-        <div class="panel__switcher"></div>
-      </div>
-      <div class="editor-row">
-        <div class="editor-canvas">
-          <div id="gjs">
-            <h1>Hello World Component!</h1>
-          </div>
+    <header>
+        <span><img src="img/logo.jpg" alt="">SiteHustle</span>
+        <div>
+            <ul>
+                <a href="#Home">Home</a>
+                <a href="#About">About</a>
+                <a>Services</a>
+                <a>Contact Us</a>
+            </ul>
         </div>
-        <div class="panel__right">
-          <div class="layers-container"></div>
-          <div class="styles-container"></div>
-          <div class="traits-container"></div>
-          <div class="blocks-container"></div>
+    </header>
+
+    <section class="home-sec" id="Home">
+        <div class="home-des">
+            <h1>Free and Open Source Web Builder Framework</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum dui nec mollis posuere. Etiam sit amet purus a mi euismod euismod. Vestibulum congue enim quis tortor vehicula, in posuere quam hendrerit.</p>
+            <button onclick="GS()">Get Started</button>
         </div>
-      </div>
-    </div>
-    <script src="JS/grapes.js"></script>
-    <script src="JS/static.js"></script>
+        <div class="home-pic">
+            <img src="img/homepage-pic.png" alt="">
+        </div>
+    </section>
+
+    <section class="about-sec" id="About">
+        <div style="margin-left: 70px;">
+            <h1 style="color: #2E4A70;">ABOUT US</h1>
+            <img src="img/NaviaAndMe.png" alt="picture ko and my bebe">
+            <div class="svg">
+                <svg height="110" width="100">
+                    <circle cx="10" cy="10" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="40" cy="10" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="70" cy="10" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="10" cy="40" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="40" cy="40" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="70" cy="40" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="10" cy="70" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="40" cy="70" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="70" cy="70" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="10" cy="100" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="40" cy="100" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                    <circle cx="70" cy="100" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
+                </svg>
+            </div>
+            
+        </div>
+        <div style="margin: 0 20px 0 20px; ">
+            <h1 style="text-align: right;">Free and Open Source Web Builder Framework</h1>
+            <p style="text-align: right;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum dui nec mollis posuere. Etiam sit amet purus a mi euismod euismod. Vestibulum congue enim quis tortor vehicula, in posuere quam hendrerit.</p>
+        </div>
+         
+    </section>
+
+    <script>
+        function GS(){
+            window.open("Login-reg.html", "_self");
+        }
+    </script>
 </body>
 </html>

@@ -92,7 +92,6 @@
         .about-sec{
             background: linear-gradient(90deg, #F1F3F2 50%, #DFB160 50%);
             justify-content: space-between;
-            padding: 50px 0 0 0;
         }
         
         section .home-des{
@@ -108,9 +107,9 @@
         section .home-des button{
             font-weight: bolder;
             cursor: pointer;
-            font-size: 2vh;
+            font-size: 14px;
             margin-top: 30px;
-            padding: 10px 100px 10px 100px;
+            padding: 10px 70px 10px 70px;
             color: white;
             background-color: #DFB160;
             border-color: white;
@@ -120,21 +119,78 @@
 
         .home-pic img{
             width: 90%;
+            max-width: 100%;
 
         }
 
         .about-sec img {
             width: 95%;
+            max-width: 100%;
         }
 
-        .about-sec div h1{
-            font-size: 50px;
-        }
+        
         .svg{
-            margin-top: 1vh;
+            margin-top: 10px;
             width: 85%;
+            margin-left: 2vh;
             display: flex;
             justify-content: end;
+            max-width: 100%;
+        }
+        
+        header div .dropdown{
+            display: none;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropdown:hover img{background-color: #abb1ab;}
+
+        @media screen and (max-width: 768px){
+            
+            header div ul{
+                display: none;
+            }
+            header div{
+                margin-right: 0;
+            }
+            header div .dropdown{
+                display: block;
+                font-size: 16px;
+                border-radius: 4px;
+            }
+            option{
+                padding: 10px;
+            }
+            p{
+                font-size: 14px;
+            }
+            h1{
+                font-size: 20px;
+            }
+            .svg{
+                width: 80%;
+                margin-left: 2vh;
+            }
+            section .home-des button{
+                font-size: 12px;
+                padding: 5px 40px 5px 40px;
+            }
         }
     </style>
 </head>
@@ -148,6 +204,16 @@
                 <a>Services</a>
                 <a>Contact Us</a>
             </ul>
+            <div class="dropdown">
+                <img src="img/burger.png" alt="" style="width: 100px;">
+                <div class="dropdown-content">
+                    <a href="#Home">Home</a>
+                    <a href="#About">About</a>
+                    <a href="">Services</a>
+                    <a href="">Contact Us</a>
+                </div>
+            </div>
+            
         </div>
     </header>
 
@@ -163,7 +229,7 @@
     </section>
 
     <section class="about-sec" id="About">
-        <div style="margin-left: 70px;">
+        <div style="margin-left: 50px; margin-top: 70px;">
             <h1 style="color: #2E4A70;">ABOUT US</h1>
             <img src="img/NaviaAndMe.png" alt="picture ko and my bebe">
             <div class="svg">

@@ -123,3 +123,23 @@ html,body{
 [data-tooltip]::after {
   background: rgba(51, 51, 51, 0.9);
 }
+
+
+
+.error{
+  display: none;
+}
+@media screen  and (max-width: 768px){
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main{
+    display: none;
+  }
+  
+  .error{
+    display: inline;
+  }
+}

@@ -161,7 +161,16 @@
 
         .dropdown:hover img{background-color: #abb1ab;}
 
+        .about-pic{
+            margin-left: 50px; 
+            margin-top: 70px;
+        }
+
+        .about-des{
+            margin: 0 20px 0 20px; 
+        }
         @media screen and (max-width: 768px){
+            
             
             header div ul{
                 display: none;
@@ -178,18 +187,32 @@
                 padding: 10px;
             }
             p{
-                font-size: 14px;
+                font-size: 10px;
             }
             h1{
-                font-size: 20px;
+                font-size: 14px;
             }
             .svg{
-                width: 80%;
+                width: 74%;
                 margin-left: 2vh;
+                height: auto;
             }
             section .home-des button{
                 font-size: 12px;
                 padding: 5px 40px 5px 40px;
+            }
+
+            section .home-des{
+                margin-left: 10px;
+            }
+
+            .about-pic{
+                margin: 10px;
+                margin-top: 70px;
+            }
+
+            .about-des{
+                margin: 20px 10px 20px 10px;
             }
         }
     </style>
@@ -229,7 +252,7 @@
     </section>
 
     <section class="about-sec" id="About">
-        <div style="margin-left: 50px; margin-top: 70px;">
+        <div class="about-pic">
             <h1 style="color: #2E4A70;">ABOUT US</h1>
             <img src="img/NaviaAndMe.png" alt="picture ko and my bebe">
             <div class="svg">
@@ -250,7 +273,7 @@
             </div>
             
         </div>
-        <div style="margin: 0 20px 0 20px; ">
+        <div class="about-des">
             <h1 style="text-align: right;">Free and Open Source Web Builder Framework</h1>
             <p style="text-align: right;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum dui nec mollis posuere. Etiam sit amet purus a mi euismod euismod. Vestibulum congue enim quis tortor vehicula, in posuere quam hendrerit.</p>
         </div>

@@ -168,9 +168,11 @@
 
         .about-des{
             margin: 0 20px 0 20px; 
+            text-align: right;
         }
+
+
         @media screen and (max-width: 768px){
-            
             
             header div ul{
                 display: none;
@@ -183,37 +185,48 @@
                 font-size: 16px;
                 border-radius: 4px;
             }
-            option{
-                padding: 10px;
+
+            section {
+                display: flex;
+                flex-direction: column;
             }
-            p{
-                font-size: 10px;
+            .home-sec{
+                flex-direction: column-reverse;
             }
-            h1{
-                font-size: 14px;
+            .home-pic{
+                margin-left: 10%;
+            }
+            section .home-des{
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+            }
+            section .home-des button{
+                width: 40%;
+                margin-left: 30%;
             }
             .svg{
                 display: none;
             }
-            section .home-des button{
-                font-size: 12px;
-                padding: 5px 40px 5px 40px;
+            p{
+                color: rgb(48, 45, 45);
+                text-align: left;
             }
-
-            section .home-des{
-                margin-left: 10px;
+            h1{
+                text-align: left;
+                color: rgb(48, 45, 45);
             }
-
-            .about-pic{
-                margin: 10px;
-                margin-top: 70px;
-                margin-bottom: 70px;
-            }
-
+            
             .about-des{
-                margin: 20px 10px 20px 10px;
+                text-align: left;
+                margin: 1% 5% 0 5%;
+            }
+            .about-pic{
+                width: 80%;
             }
         }
+
+
     </style>
 </head>
 <body>
@@ -270,11 +283,10 @@
                     <circle cx="70" cy="100" r="5" stroke="#DFB160" stroke-width="3" fill="#DFB160" />
                 </svg>
             </div>
-            
         </div>
         <div class="about-des">
-            <h1 style="text-align: right;">Free and Open Source Web Builder Framework</h1>
-            <p style="text-align: right;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum dui nec mollis posuere. Etiam sit amet purus a mi euismod euismod. Vestibulum congue enim quis tortor vehicula, in posuere quam hendrerit.</p>
+            <h1>Free and Open Source Web Builder Framework</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum dui nec mollis posuere. Etiam sit amet purus a mi euismod euismod. Vestibulum congue enim quis tortor vehicula, in posuere quam hendrerit.</p>
         </div>
          
     </section>

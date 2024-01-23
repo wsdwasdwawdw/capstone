@@ -1,0 +1,269 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F1F3F2;
+}
+button{
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 30px;
+    padding: 10px 70px 10px 70px;
+    color: white;
+    background-color: #DFB160;
+    border-color: white;
+    border-radius: 7px;
+    box-shadow: 0 20px 25px -10px black;
+}
+p{
+    font-size: 200%;
+}
+
+h1{
+    font-size: 250%;
+    font-weight: bold;
+}
+section{
+    display: flex;
+    height: 900px;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+
+/* HEADER */
+header{
+    background-color: #F1F3F2;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: space-between;
+}
+header span{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+header span img{
+    width: 50px;
+    height: 50px;
+}
+header div{
+    margin-right: 30px;
+}
+header div ul {
+    display: flex;
+}
+
+header div ul a{
+    margin-left: 40px;
+    text-decoration: none;
+    color: #304A6F;
+    font-size: 1.1em;
+    position: relative;
+    font-weight: 500;
+    transition: .5s;
+}
+
+header div ul a::after{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #DFB160;
+    border-radius: 5px;
+    left: 0;
+    bottom: -5px;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+header div ul a:hover{
+    color: #DFB160;
+    cursor: pointer;
+}
+header div ul a:hover::after{
+    transform-origin: center;
+    transform: scaleX(.80);
+}
+
+header div .dropdown{
+    display: none;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover img{background-color: #abb1ab;}
+
+
+/* HOME */
+.home-sec{
+    padding: 20px 0 20px 0;
+    background-image: linear-gradient(to bottom, #2E4A70, white);
+    
+}
+
+.home-des{
+    margin: 20px;
+    width: 60vh;
+    background-color: pink;
+}
+
+.home-pic img{
+    width: 100%;
+}
+
+
+/* ABOUT */
+.about-sec{
+    padding: 20px 0 20px 0;
+    background: linear-gradient(to right, #F1F3F2 50%, #DFB160 50%);
+}
+
+.about-sec img {
+    width: 100%;
+}
+
+
+.svg{
+    display: flex;
+    justify-content: start;
+    background-color: aqua;
+    justify-content: end;
+    padding-right: 10%;
+}
+
+
+.about-pic{
+    margin-left: 20px; 
+    width: 100%;
+    background-color: pink;
+
+}
+
+.about-des{
+    margin: 20px;
+    width: 72%;
+    text-align: right;
+}
+
+
+/* SERVICE */
+.service-sec{
+    padding: 10% 0 0 0;
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(to top, #2E4A70 30%, white);
+    flex-direction: column;
+}
+
+.services-container{
+    margin: 30px 0 0 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.services-container div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 10% 0;
+}
+.services-container div div{
+    height: 300px;
+    width: 150%;
+    background: white;
+    border-radius: 49% 49% 0 0;
+    box-shadow: 0 25px 30px -10px black;
+}
+
+.service-sec h1{
+    color: #2E4A70;
+}
+
+@media screen and (max-width: 768px){
+    
+    header div ul{
+        display: none;
+    }
+    header div{
+        margin-right: 0;
+    }
+    header div .dropdown{
+        display: block;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+    .home-sec{
+        flex-direction: column-reverse;
+    }
+    .home-pic{
+        margin-left: 10%;
+    }
+    section .home-des{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    section .home-des button{
+        width: 40%;
+        padding: 10px 0 10px 0;
+        margin-left: 30%;
+    }
+    .svg{
+        display: none;
+    }
+    p{
+        color: rgb(48, 45, 45);
+        text-align: left;
+    }
+    h1{
+        text-align: left;
+        color: rgb(48, 45, 45);
+    }
+    .about-pic h1{
+        display: none;
+    }
+    .about-des{
+        text-align: left;
+        margin: 1% 5% 0 5%;
+    }
+    .about-pic{
+        width: 80%;
+        margin: 10% 0 0 5% ;
+    }
+}
+

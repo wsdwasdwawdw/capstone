@@ -125,7 +125,7 @@ header div .dropdown{
 /* HOME */
 .home {
     height: 60vh;
-    background-image: url("/img/bg pic.png");
+    background-image: url("../img/bg pic.png");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -162,7 +162,7 @@ header div .dropdown{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url("/img/yung sa services.png");
+    background-image: url("../img/yung sa services.png");
     background-repeat: no-repeat;
     background-size: cover;
     

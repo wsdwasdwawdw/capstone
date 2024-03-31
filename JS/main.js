@@ -31,12 +31,12 @@ logshowhide.addEventListener("click", ()=>{
 
     if(logtoggle){
         logpassword.type = "text";
-        logshowhide.src = "../img/show.png";
+        logshowhide.src = "img/show.png";
         logtoggle = false;
     }
     else{
         logpassword.type = "password";
-        logshowhide.src = "../img/hide.png";
+        logshowhide.src = "img/hide.png";
         logtoggle = true;
     }
 });
@@ -45,12 +45,12 @@ regshowhide.addEventListener("click", ()=>{
 
     if(regtoggle){
         regpassword.type = "text";
-        regshowhide.src = "../img/show.png";
+        regshowhide.src = "img/show.png";
         regtoggle = false;
     }
     else{
         regpassword.type = "password";
-        regshowhide.src = "../img/hide.png";
+        regshowhide.src = "img/hide.png";
         regtoggle = true;
     }
 });

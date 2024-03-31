@@ -8,58 +8,70 @@ html{
 body{
     margin: 0;
     padding: 0;
-    background-color: #F1F3F2;
+    background-color: #222222;
 }
 button{
     padding: 15px;
     font-size: 20px;
     font-weight: bolder;
     background-color: transparent;
-    color: #DFB160;
-    border: 5px #DFB160 solid;
+    color: #ECC053;
+    border: 2px #ECC053 solid;
     border-radius: 100px;
+    transition: .5s;
 }
-p{
-    font-size: 25px;
+p, a, button{
+    font-family: 'Arimo', sans-serif;
+}
+button:hover, .login:hover{
+    cursor: pointer;
+    border: 2px black solid;
+    color: black;
 }
 
+h1, h2, h3 {
+    font-family: 'Helios Extended', sans-serif;
+}
 h1{
     font-size: 100px;
-    font-weight: bold;
 }
-
+h2{
+    font-size: 75px;
+}
+h3{
+    font-size: 40px;
+}
 
 /* HEADER */
 header{
-    background-color: #F1F3F2;
-    width: 100%;
-    position: fixed;
+    padding: 15px 100px;
     display: flex;
     align-items: center;
-    height: 50px;
     justify-content: space-between;
+    
 }
-header span{
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-}
-header span img{
-    width: 50px;
+header img{
     height: 50px;
-}
-header div{
-    margin-right: 30px;
 }
 header div ul {
     display: flex;
+    align-items: center;
+    gap: 40px;
 }
-
+header .login{
+    border: 2px solid #ECC053;
+    padding: 10px 50px;
+    border-radius: 100px;
+    color: #ECC053;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    transition: .5s;
+}
 header div ul a{
-    margin-left: 40px;
     text-decoration: none;
-    color: #304A6F;
-    font-size: 1.1em;
+    color: #f1f1f1;
+    font-size: 20px;
     position: relative;
     font-weight: 500;
     transition: .5s;
@@ -70,7 +82,7 @@ header div ul a::after{
     position: absolute;
     width: 100%;
     height: 3px;
-    background: #DFB160;
+    background: #ECC053;
     border-radius: 5px;
     left: 0;
     bottom: -5px;
@@ -79,7 +91,7 @@ header div ul a::after{
     transition: transform .5s;
 }
 header div ul a:hover{
-    color: #DFB160;
+    color: #ECC053;
     cursor: pointer;
 }
 header div ul a:hover::after{
@@ -113,7 +125,7 @@ header div .dropdown{
 /* HOME */
 .home {
     height: 60vh;
-    background-image: url("/img/home\ pic.jpg");
+    background-image: url("/img/bg pic.png");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -125,105 +137,218 @@ header div .dropdown{
     text-align: center;
 }
 .home span{
-    color: #DFB160;
+    color: #ECC053;
 }
 .home p{
-    padding: 0 450px;
+    font-size: 25px;
+    padding: 0 400px;
 }
-/* PRICE */
-/* 
-.price {
+
+/* SERVICES */
+.service{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    gap: 50px
+}
+
+.service .container{
+    height: 600px;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("/img/yung sa services.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.service .container .features{
+    height: 600px;
+    width: 316px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+    background-color: rgba(35,35,35,0.5);
+}
+
+.service .line{
+    width: 250px;
+    border: 1px #665C8B solid;
+}
+
+.service ul{
+    width: 250px;
+    text-align: justify;
+}
+
+.service li{
+    margin: 10px 0 0 0;
+}
+
+/* ABOUT US */
+
+.about{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, transparent 50%, #ECC053 50%);
+}
+
+.about img{
+    width: 60%;
+}
+
+.about h1{
+    color: #ffffff;
+    margin: 0 0 200px 0;
+}
+
+.about button{
+    margin: 100px 0 0 0;
+    padding: 10px 20px ;
+    border: 2px black solid;
+    color: black;
+}
+
+.about button:hover{
+    border: 2px #8d763c solid;
+    color: #8d763c;
+}
+.about div{
+    height: 500px;
+}
+
+/* LOGIN AND REGISTRATION FORM */
+.login-reg{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-.container{
-    height: 500px;
+    color: white;
+}
+.login-reg span{
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 1s;
+}
+.login-reg span:hover{
+    color: aqua;
+}
+.login-reg h3{
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.login-reg .close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+.login-reg .container{
+    height: fit-content;
     width: fit-content;
+    position: relative;
+    background-color: black;
+    border-radius: 30px;
+    padding: 70px;
+    gap: 10px;
+}
+.login-reg .container .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ECC053;
+}
+
+.login-reg .container p{
     display: flex;
     justify-content: space-between;
+}
+
+.login-reg .login-form, .login-reg .reg-form{
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-
-}
-  .divider {
-    flex-grow: 1;
-    height: 500px;
-    width: 290px; /* Adjust height as needed 
-    background-image: url('/img/back.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .divider:nth-child(1) {
-    background-position: top left;
-  }
-
-  .divider:nth-child(2) {
-    background-position: center center;
-  }
-
-  .divider:nth-child(3) {
-    background-position: bottom right;
-  } */
-
-
-
-@media screen and (max-width: 1000px){
-    
-    header div ul{
-        display: none;
-    }
-    header div{
-        margin-right: 0;
-    }
-    header div .dropdown{
-        display: block;
-        font-size: 16px;
-        border-radius: 4px;
-    }
-
-    section {
-        display: flex;
-        flex-direction: column;
-    }
-    .home-sec{
-        flex-direction: column-reverse;
-    }
-    .home-pic{
-        margin-left: 10%;
-    }
-    section .home-des{
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-    }
-    section .home-des button{
-        width: 40%;
-        padding: 10px 0 10px 0;
-        margin-left: 30%;
-    }
-    .svg{
-        display: none;
-    }
-    p{
-        color: rgb(48, 45, 45);
-        text-align: left;
-    }
-    h1{
-        text-align: left;
-        color: rgb(48, 45, 45);
-    }
-    .about-pic h1{
-        display: none;
-    }
-    .about-des{
-        text-align: left;
-        margin: 1% 5% 0 5%;
-    }
-    .about-pic{
-        width: 80%;
-        margin: 10% 0 0 5% ;
-    }
 }
 
+/* LOGIN FORM */
+.login-form > div:nth-child(-n+2) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-form > div:nth-child(-n+2) input{
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+}
+.login-reg .container .logo img{
+    width: 70px;
+}
+
+.login-reg .login-form .log-showhide{
+    width: 30px;
+    position: absolute;
+    top: 52%;
+    right: 17%;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.login-reg button{
+    padding: 10px;
+    width: 100%;
+    background-color: #ECC053;
+    color: white;
+    border-radius: 10px;
+}
+
+/* REGISTRATION FORM */
+
+.reg-form > div:nth-child(-n+3) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.reg-form > div:nth-child(-n+3) input{
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+}
+.login-reg .reg-form .reg-showhide{
+    width: 30px;
+    position: absolute;
+    top: 63.5%;
+    right: 17%;
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+.login-reg .login-form-hide{
+    display: none;
+}
+
+.login-reg .reg-form-hide{
+    display: none;
+}
+
+.hide{
+    display: none;
+}
